@@ -35,8 +35,6 @@ for i, img in enumerate(all_img):
 for proc in jobs:
     proc.join()
 
-total = 0
-for d in return_dict.values():
-    total += d
+total = sum(return_dict.values())
 r = s.post('http://FIXME:9003/', data={"string": "%x" % total})
 print(r.text)

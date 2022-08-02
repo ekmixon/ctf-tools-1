@@ -14,7 +14,7 @@ otp_seed = 83427324
 otp = pyotp.TOTP(b32encode(str(otp_seed).encode()))
 otp_value = str(otp.now())
 
-print("OTP value is: " + otp_value)
+print(f"OTP value is: {otp_value}")
 
 print("Creating original PDF with OTP content")
 
